@@ -3,9 +3,10 @@ import IconDiamond from './icons/IconDiamond.vue';
 
 const props = defineProps({
   size: String,
-  badgeCount: Number
+  badgeCount: Number,
 });
 
+console.log(props)
 </script>
 
 <template>
@@ -14,7 +15,7 @@ const props = defineProps({
       <slot name="icon"></slot>
     </div>
     <slot></slot>
-    <div class="badge">
+    <div v-if="props.badgeCount" class="badge">
       <IconDiamond class="badge-icon" />
       {{ props.badgeCount }}
     </div>
@@ -24,7 +25,7 @@ const props = defineProps({
 <style scoped>
   button {
     font-family: Inter, sans-serif;
-    display: flex;
+    display: inline-flex;
     gap: 12px;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,10 @@ const props = defineProps({
     display: flex;
     width: 20px;
     height: 20px;
+  }
+
+  .icon:empty {
+    display: none;
   }
 
   .badge {
