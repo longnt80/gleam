@@ -1,10 +1,12 @@
 <script setup>
 import IconDiamond from './icons/IconDiamond.vue';
+import IconLoading from './icons/IconLoading.vue';
 
 const props = defineProps({
   size: String,
   badgeCount: Number,
   disabled: Boolean,
+  isLoading: Boolean,
 });
 
 console.log(props)
@@ -20,6 +22,7 @@ console.log(props)
       <IconDiamond class="badge-icon" />
       {{ props.badgeCount }}
     </div>
+    <div v-if="props.isLoading" class="loader"><IconLoading /></div>
   </button>
 </template>
 
@@ -86,5 +89,11 @@ console.log(props)
   .badge .badge-icon {
     width: 16px;
     height: 16px;
+  }
+
+  .loader {
+    width: 20px;
+    height: 20px;
+    color: #fff;
   }
 </style>
