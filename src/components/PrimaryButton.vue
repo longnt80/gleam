@@ -3,13 +3,10 @@ import IconDiamond from './icons/IconDiamond.vue';
 import IconLoading from './icons/IconLoading.vue';
 
 const props = defineProps({
-  size: String,
   badgeCount: Number,
   disabled: Boolean,
   isLoading: Boolean,
 });
-
-console.log(props)
 </script>
 
 <template>
