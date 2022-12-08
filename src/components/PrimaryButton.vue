@@ -55,6 +55,11 @@ console.log(props)
     cursor: not-allowed;
   }
 
+  button:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgb(255,255,255), 0px 0px   0px 4px rgba(51,182,121,0.6);
+  }
+
   .icon {
     display: flex;
     width: 20px;
