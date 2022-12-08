@@ -40,6 +40,11 @@ console.log(props)
     border-radius: 8px;
   }
 
+  button:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #33B679;
+    box-shadow: 0px 2px 4px rgba(10, 14, 20, 0.08);
+  }
+
   .icon {
     display: flex;
     width: 20px;
