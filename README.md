@@ -39,3 +39,11 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+## Assumptions:
+- Badge is to show a number only with a fixed icon (diamond). If the value is not a number (or a string of numbers) it would show a warning in the console.
+- Buttons can receive any icon (not just the plus sign).
+- SVGs are rendered inline as Vue components. This is what I normally do in React as well.
+- I can't figure out the pattern of the paddings so let's assume that I got an agreement with the designer to have a universal padding of 10px for all button variants.
+- Same with the loading icon. I'm always putting the loading at the tail of the button and assume that all types of buttons can have a loading state (including disabled).
+- Tested in Chrome, Firefox and Safari (Mac)
