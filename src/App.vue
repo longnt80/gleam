@@ -7,9 +7,7 @@ import IconPlus from "./components/icons/IconPlus.vue";
   <main>
     <div>
       <!-- Default button -->
-      <PrimaryButton>
-        Button
-      </PrimaryButton>
+      <PrimaryButton> Button </PrimaryButton>
 
       <!-- With icon -->
       <PrimaryButton>
@@ -21,9 +19,7 @@ import IconPlus from "./components/icons/IconPlus.vue";
         <template #icon><IconPlus /></template>
       </PrimaryButton>
 
-      <PrimaryButton :badge-count="3">
-        Button
-      </PrimaryButton>
+      <PrimaryButton :badge-count="3"> Button </PrimaryButton>
 
       <PrimaryButton :badge-count="3">
         <template #icon><IconPlus /></template>
@@ -47,9 +43,7 @@ import IconPlus from "./components/icons/IconPlus.vue";
 
     <div>
       <!-- Default button -->
-      <PrimaryButton :is-loading="true">
-        Button
-      </PrimaryButton>
+      <PrimaryButton :is-loading="true"> Button </PrimaryButton>
 
       <!-- With icon -->
       <PrimaryButton :is-loading="true">
