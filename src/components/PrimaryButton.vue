@@ -1,8 +1,11 @@
 <script setup>
+import IconDiamond from './icons/IconDiamond.vue';
+
 const props = defineProps({
   size: String,
   badgeCount: Number
 });
+
 </script>
 
 <template>
@@ -11,7 +14,10 @@ const props = defineProps({
       <slot name="icon"></slot>
     </div>
     <slot></slot>
-    <div class="badge">{{ props.badgeCount }}</div>
+    <div class="badge">
+      <IconDiamond class="badge-icon" />
+      {{ props.badgeCount }}
+    </div>
   </button>
 </template>
 
@@ -35,9 +41,25 @@ const props = defineProps({
 
   .icon {
     display: flex;
+    width: 20px;
+    height: 20px;
   }
 
   .badge {
     display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 100px;
+    padding: 4px 8px;
+    font-size: 12px;
+    height: 24px;
+    width: 44px;
+  }
+
+  .badge .badge-icon {
+    width: 16px;
+    height: 16px;
   }
 </style>
