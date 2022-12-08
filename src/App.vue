@@ -32,6 +32,11 @@ import IconPlus from "./components/icons/IconPlus.vue";
     <PrimaryButton :badge-count="3">
       <template #icon><IconPlus /></template>
     </PrimaryButton>
+
+    <PrimaryButton :disabled="true" :badge-count="3">
+      <template #icon><IconPlus /></template>
+      Button
+    </PrimaryButton>
   </main>
 </template>
 

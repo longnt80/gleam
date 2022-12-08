@@ -4,13 +4,14 @@ import IconDiamond from './icons/IconDiamond.vue';
 const props = defineProps({
   size: String,
   badgeCount: Number,
+  disabled: Boolean,
 });
 
 console.log(props)
 </script>
 
 <template>
-  <button>
+  <button :disabled="props.disabled">
     <div class="icon">
       <slot name="icon"></slot>
     </div>
@@ -47,6 +48,11 @@ console.log(props)
 
   button:active {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #33B679;
+  }
+
+  button:disabled {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), #33B679;
+    cursor: not-allowed;
   }
 
   .icon {
